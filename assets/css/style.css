@@ -1,0 +1,170 @@
+@charset "UTF-8";
+.container{
+  width: 100%;
+  height: 100%;
+  background: #EEE;
+  padding: 10px;
+}
+.card{
+  width: 74px;
+  height: 105px;
+  border-radius:5px;
+  cursor:pointer;
+  background: -webkit-linear-gradient(top, #FFF, #DDD);
+  background: linear-gradient(top, #FFF, #DDD);
+  box-shadow: 1px 1px 6px #999;
+  position:relative;
+  display: inline-block;
+  transform-style: preserve-3d;
+  transition: all .5s ease-out;
+}
+.card.turned {
+  transform: rotateY(180deg);
+  box-shadow: -1px 1px 6px #999;
+}
+.card span,.card:after,.card:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+}
+.card:after{
+  background-color: #FFF;
+}
+.card span:before,
+.card span:after{
+  position: absolute;
+  font-size: 0.84rem;
+  text-align: center;
+  line-height: 1.2rem;
+  font-family: sans-serif;
+  width: 0.72rem;
+  letter-spacing: -0.12rem;
+  top: 0rem;
+  bottom: 0.12rem;
+}
+.card:before{
+  text-align:center;
+}
+/*.card.espadas:before {
+  content: "♠";
+}
+.card.copas:before {
+  content: "♥";
+}
+.card.ouros:before {
+  content: "♦";
+}
+.card.paus:before {
+  content: "♣";
+}*/
+.card span::after {
+  right: 0;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+}
+
+.card:after {
+  content: "";
+  background-image: url("../img/back.png");
+  top: 0;
+  left: 0;
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+.copas,.ouros{ color: #d40000; }
+
+.espadas.c1 span{ background-image: url("../svg/0_1.svg"); }
+.espadas.c2 span{ background-image: url("../svg/0_2.svg"); }
+.espadas.c3 span{ background-image: url("../svg/0_3.svg"); }
+.espadas.c4 span{ background-image: url("../svg/0_4.svg"); }
+.espadas.c5 span{ background-image: url("../svg/0_5.svg"); }
+.espadas.c6 span{ background-image: url("../svg/0_6.svg"); }
+.espadas.c7 span{ background-image: url("../svg/0_7.svg"); }
+.espadas.c8 span{ background-image: url("../svg/0_8.svg"); }
+.espadas.c9 span{ background-image: url("../svg/0_9.svg"); }
+.espadas.c10 span{ background-image: url("../svg/0_10.svg"); }
+.espadas.c11 span{ background-image: url("../svg/0_11.svg"); }
+.espadas.c12 span{ background-image: url("../svg/0_12.svg"); }
+.espadas.c13 span{ background-image: url("../svg/0_13.svg"); }
+
+.copas.c1 span{ background-image: url("../svg/1_1.svg"); }
+.copas.c2 span{ background-image: url("../svg/1_2.svg"); }
+.copas.c3 span{ background-image: url("../svg/1_3.svg"); }
+.copas.c4 span{ background-image: url("../svg/1_4.svg"); }
+.copas.c5 span{ background-image: url("../svg/1_5.svg"); }
+.copas.c6 span{ background-image: url("../svg/1_6.svg"); }
+.copas.c7 span{ background-image: url("../svg/1_7.svg"); }
+.copas.c8 span{ background-image: url("../svg/1_8.svg"); }
+.copas.c9 span{ background-image: url("../svg/1_9.svg"); }
+.copas.c10 span{ background-image: url("../svg/1_10.svg"); }
+.copas.c11 span{ background-image: url("../svg/1_11.svg"); }
+.copas.c12 span{ background-image: url("../svg/1_12.svg"); }
+.copas.c13 span{ background-image: url("../svg/1_13.svg"); }
+
+.paus.c1 span{ background-image: url("../svg/2_1.svg"); }
+.paus.c2 span{ background-image: url("../svg/2_2.svg"); }
+.paus.c3 span{ background-image: url("../svg/2_3.svg"); }
+.paus.c4 span{ background-image: url("../svg/2_4.svg"); }
+.paus.c5 span{ background-image: url("../svg/2_5.svg"); }
+.paus.c6 span{ background-image: url("../svg/2_6.svg"); }
+.paus.c7 span{ background-image: url("../svg/2_7.svg"); }
+.paus.c8 span{ background-image: url("../svg/2_8.svg"); }
+.paus.c9 span{ background-image: url("../svg/2_9.svg"); }
+.paus.c10 span{ background-image: url("../svg/2_10.svg"); }
+.paus.c11 span{ background-image: url("../svg/2_11.svg"); }
+.paus.c12 span{ background-image: url("../svg/2_12.svg"); }
+.paus.c13 span{ background-image: url("../svg/2_13.svg"); }
+
+.ouros.c1 span{ background-image: url("../svg/3_1.svg"); }
+.ouros.c2 span{ background-image: url("../svg/3_2.svg"); }
+.ouros.c3 span{ background-image: url("../svg/3_3.svg"); }
+.ouros.c4 span{ background-image: url("../svg/3_4.svg"); }
+.ouros.c5 span{ background-image: url("../svg/3_5.svg"); }
+.ouros.c6 span{ background-image: url("../svg/3_6.svg"); }
+.ouros.c7 span{ background-image: url("../svg/3_7.svg"); }
+.ouros.c8 span{ background-image: url("../svg/3_8.svg"); }
+.ouros.c9 span{ background-image: url("../svg/3_9.svg"); }
+.ouros.c10 span{ background-image: url("../svg/3_10.svg"); }
+.ouros.c11 span{ background-image: url("../svg/3_11.svg"); }
+.ouros.c12 span{ background-image: url("../svg/3_12.svg"); }
+.ouros.c13 span{ background-image: url("../svg/3_13.svg"); }
+
+.c1 span:before,
+.c1 span:after{ content: "A"; }
+.c2 span:before,
+.c2 span:after{ content: "2"; }
+.c3 span:before,
+.c3 span:after{ content: "3"; }
+.c4 span:before,
+.c4 span:after{ content: "4"; }
+.c5 span:before,
+.c5 span:after{ content: "5"; }
+.c6 span:before,
+.c6 span:after{ content: "6"; }
+.c7 span:before,
+.c7 span:after{ content: "7"; }
+.c8 span:before,
+.c8 span:after{ content: "8"; }
+.c9 span:before,
+.c9 span:after{ content: "9"; }
+.c10 span:before,
+.c10 span:after{ content: "10"; }
+.c11 span:before,
+.c11 span:after{ content: "J"; }
+.c12 span:before,
+.c12 span:after{ content: "Q"; }
+.c13 span:before,
+.c13 span:after{ content: "K"; }
