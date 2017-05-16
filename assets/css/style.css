@@ -63,7 +63,7 @@
 .card.paus:before {
   content: "♣";
 }*/
-.card span::after {
+.card span:after {
   right: 0;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
