@@ -5,6 +5,9 @@
   background: #EEE;
   padding: 10px;
 }
+.pack{
+  background:#666;
+}
 .card{
   width: 74px;
   height: 105px;
@@ -17,9 +20,10 @@
   display: inline-block;
   transform-style: preserve-3d;
   transition: all .5s ease-out;
+  /*transform: rotateY(180deg);*/
 }
 .card.turned {
-  transform: rotateY(180deg);
+  transform: rotateY(0deg);
   box-shadow: -1px 1px 6px #999;
 }
 .card span,.card:after,.card:before {
